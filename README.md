@@ -10,7 +10,8 @@ To create an AWS RAM Resource share, define the following input variables:
 
 ```hcl
 module "ram_resource_share" {
-  source = "../../"
+  source  = "schubergphilis/mcaf-ram-resource-share/aws"
+  version = "~> 1.0.0"
 
   name = "ram-resource-share"
   shared_resource_arns = {
@@ -23,7 +24,8 @@ Optionally, you can associate the the AWS RAM Resource share to pricipals (like 
 
 ```hcl
 module "ram_resource_share" {
-  source = "../../"
+  source  = "schubergphilis/mcaf-ram-resource-share/aws"
+  version = "~> 1.0.0"
 
   name = "ram-resource-share"
   shared_resource_arns = {

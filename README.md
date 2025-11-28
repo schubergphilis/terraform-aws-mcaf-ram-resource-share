@@ -45,13 +45,13 @@ module "ram_resource_share" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.82 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 6.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.82 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 6.0 |
 
 ## Modules
 
@@ -74,6 +74,7 @@ No modules.
 | <a name="input_allow_external_principals"></a> [allow\_external\_principals](#input\_allow\_external\_principals) | Indicates whether principals outside your organization can be associated with the AWS RAM Resource Share | `bool` | `false` | no |
 | <a name="input_permission_arns"></a> [permission\_arns](#input\_permission\_arns) | Specifies the Amazon Resource Names (ARNs) of the RAM permission to associate with the AWS RAM Resource Share. If you do not specify an ARN for the permission, AWS RAM automatically attaches the default version of the permission for each resource type. | `set(string)` | `null` | no |
 | <a name="input_principals"></a> [principals](#input\_principals) | A map of keys to AWS Principals (Account ID's, OUs) to associate with the AWS RAM Resource Share | `map(string)` | `{}` | no |
+| <a name="input_region"></a> [region](#input\_region) | The AWS region where resources will be created; if omitted the default provider region is used | `string` | `null` | no |
 
 ## Outputs
 

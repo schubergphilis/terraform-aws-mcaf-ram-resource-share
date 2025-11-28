@@ -21,6 +21,12 @@ variable "principals" {
   description = "A map of keys to AWS Principals (Account ID's, OUs) to associate with the AWS RAM Resource Share"
 }
 
+variable "region" {
+  type        = string
+  default     = null
+  description = "The AWS region where resources will be created; if omitted the default provider region is used"
+}
+
 variable "shared_resource_arns" {
   type        = map(string)
   description = "A map of keys to Resource ARNs to associate with the AWS RAM Resource Share"
